@@ -64,7 +64,7 @@ function textToFile(text) {
 
 const inputElement = document.querySelector(
   "#column-center > div > div > div.chat-input > div > div.rows-wrapper-wrapper > div > div.new-message-wrapper > input[type=file]"
-);
+); 
 
 function sendTextToImage(text) {
   const createdFile = textToFile(text);
