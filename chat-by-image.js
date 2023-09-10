@@ -62,15 +62,10 @@ function textToFile(text) {
   return file;
 }
 
-const inputElement = document.querySelector(
-  "#column-center > div > div > div.chat-input > div > div.rows-wrapper-wrapper > div > div.new-message-wrapper > input[type=file]"
-); 
-
 function sendTextToImage(text) {
   const createdFile = textToFile(text);
   const pasteEvent = new ClipboardEvent('paste', {
-    clipboardData: new DataTransfer(),
-    target: inputElement
+    clipboardData: new DataTransfer()
   });
   pasteEvent.clipboardData.items.add(createdFile);
   document.dispatchEvent(pasteEvent);
